@@ -1,0 +1,33 @@
+.warp-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.Card-Img{
+    display: flex;
+    align-items: center;
+    width: 13rem;
+    height: 25rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: 1rem;background-color: #1a1a1a9c;
+    z-index: -2;
+    
+  }
+  
+  .Img{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  
+  }
+  
+  .h4{
+    height: 60%;
+    display: flex;
+    position: absolute;
+    align-items: start;
+    color: black;
+    
+  }
