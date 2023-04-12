@@ -4,19 +4,16 @@ import { RiHome3Fill} from 'react-icons/ri';
 import { BsFillImageFill} from 'react-icons/bs';
 import { HiPaintBrush} from 'react-icons/hi2';
 import { ImVideoCamera} from 'react-icons/im';
-
-
-
-
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
   return (
     <nav className='container-nav'>
-       <div><a href=""><RiHome3Fill className='icon'/>Home</a></div>
-       <div><a href=""><BsFillImageFill className='icon'/>Fotos</a></div>
-       <div><a href=""><HiPaintBrush className='icon'/>Ilustraciones</a></div>
-       <div><a href=""><ImVideoCamera className='icon'/>Videos</a></div>
+       <div><Link to='/'><RiHome3Fill className='icon'/>Home</Link></div>
+       <div><Link to='/fotos'><BsFillImageFill className='icon'/>Fotos</Link></div>
+       <div><Link to='/ilutraciones'><HiPaintBrush className='icon'/>Ilustraciones</Link></div>
+       <div><Link to='/videos'><ImVideoCamera className='icon'/>Videos</Link></div>
     </nav>
   )
 }

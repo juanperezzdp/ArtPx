@@ -8,11 +8,15 @@
         color: black;
         margin: 0 2rem;
         text-decoration: none;
+        font-size: 1.1rem;
       .icon{
-         color: rgb(0, 141, 106);
+         color: rgb(0, 65, 49);
          margin-right: 0.5rem;
          margin-bottom: -0.2rem;
          font-size: 1.5rem;
+         &:hover{
+            color: rgb(0, 118, 89);
+         }
       }
      }
 }

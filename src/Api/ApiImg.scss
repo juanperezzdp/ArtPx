@@ -4,30 +4,34 @@
     width: 100vw;
 }
 
-.Card-Img{
+.container-wa{
     display: flex;
-    align-items: center;
     width: 13rem;
-    height: 25rem;
-    border-radius: 2rem;
+    height: 20rem;
+    border-radius: 1rem;
     overflow: hidden;
     margin: 1rem;background-color: #1a1a1a9c;
     z-index: -2;
-    
+    background-color: rgb(234, 234, 234);
   }
   
   .Img{
-    height: 100%;
+    display: flex;
+    align-items: start;
+    height: auto;
     width: 100%;
     z-index: -1;
   
   }
   
   .h4{
-    height: 60%;
+    height: 10%;
     display: flex;
     position: absolute;
     align-items: start;
     color: black;
+    h5{
+      margin-top: 1rem;
+    }
     
   }
