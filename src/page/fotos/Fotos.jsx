@@ -1,13 +1,15 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import ApiFotos from '../../Api/ApiFotos'
+import FotosLanding from './FotosLanding'
 
 function Fotos() {
   return (
-    <div>Fotos
+    <>
+        <FotosLanding/>
         <Navbar/>
         <ApiFotos/>
-    </div>
+    </>
   )
 }
 

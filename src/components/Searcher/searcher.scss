@@ -1,0 +1,27 @@
+.container-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    position: absolute;
+    height: 27rem;
+    h2{
+        
+        font-size: 3rem;
+    }
+    p{
+        
+        font-size: 1.3rem;
+    }
+    input{
+        
+        width: 40rem;
+        height: 3rem;
+        border: none;
+        border-radius: 10rem;
+        padding: 1rem;
+        color: black;
+    }
+    }

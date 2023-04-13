@@ -9,8 +9,8 @@ export function useFetch(url) {
         fetch(url)
         .then(res=> res.json())
         .then(data => setDatab(data.hits))
-        .finally(()=>setLoading(false))
         .catch((err)=>{throw err})
+        .finally(()=>setLoading(false))
     }, []);
   return { datab, loading }
 }

@@ -5,37 +5,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.container{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-height: 80%;
-color: white;
-
-
-img{
+.header{
     width: 100%;
+    height: 27rem;
     z-index: -2;
     
-}
-h2{
-    position: absolute;
-    margin-bottom: 5rem;
-    font-size: 3rem;
-}
-p{
-    position: absolute;
-    font-size: 1.3rem;
-}
-input{
-    position: absolute;
-    margin-top: 5rem;
-    width: 40rem;
-    height: 3rem;
-    border: none;
-    border-radius: 10rem;
-    padding: 1rem;
-    color: black;
-}
 }

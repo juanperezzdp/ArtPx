@@ -3,7 +3,7 @@ import {useFetch} from '../Hook/useFetch'
 import './ApiImg.scss'
 import Spinner from '../components/Spinner/Spinner'
 
-function ApiImg() {
+function ApiHome() {
   const {datab, loading} = useFetch('https://pixabay.com/api/?key=34656260-1521fb02311370c9bb96d1d72&per_page=100')
    
   return (
@@ -24,4 +24,4 @@ function ApiImg() {
   )
 }
 
-export default ApiImg
+export default ApiHome
