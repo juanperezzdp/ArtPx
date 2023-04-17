@@ -7,21 +7,44 @@
     color: white;
     position: absolute;
     height: 27rem;
-    h2{
-        
+    z-index: 9999;
+    background:  linear-gradient(0deg, #00000019 0%, #0000008c 100%);
+    h3{
+        margin-bottom: 1rem;
         font-size: 3rem;
     }
     p{
         
         font-size: 1.3rem;
+        margin-bottom: 1rem;
     }
-    input{
+
+    .input-center{
+        display: flex;
+       input{
         
-        width: 40rem;
+        width: 35rem;
         height: 3rem;
         border: none;
-        border-radius: 10rem;
+        border-radius: 1rem 0 0 1rem  ;
         padding: 1rem;
         color: black;
+        outline:0; 
     }
+    button{
+        width: 7rem;
+        color: white;
+        cursor: pointer;
+        font-size: 1.2rem;
+        height: 3rem;
+        border: none;
+        border-radius: 0 1rem 1rem 0 ;
+        background: linear-gradient(220.55deg, #48b982 0%, #0f6e40 100%);
+        
+        &:hover{
+            background: linear-gradient(220.55deg, #009b50 0%, #004122 100%);
+        }
+    } 
+    }
+    
     }

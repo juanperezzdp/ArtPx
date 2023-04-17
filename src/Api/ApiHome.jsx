@@ -4,7 +4,7 @@ import './ApiImg.scss'
 import Spinner from '../components/Spinner/Spinner'
 
 function ApiHome() {
-  const {datab, loading} = useFetch('https://pixabay.com/api/?key=34656260-1521fb02311370c9bb96d1d72&per_page=100')
+  const {datab, loading} = useFetch('https://pixabay.com/api/?key=34656260-1521fb02311370c9bb96d1d72&q=fotografia&per_page=100')
    
   return (
     <div className='warp-container'>

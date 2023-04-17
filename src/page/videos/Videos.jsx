@@ -1,11 +1,16 @@
 import React from 'react'
+import VideosLanding from './VideosLanding'
+import ApiHome from '../../Api/ApiHome'
 import Navbar from '../../components/Navbar/Navbar'
+
 
 function Videos() {
   return (
-    <div>Videos
+    <>
+        <VideosLanding/>
         <Navbar/>
-    </div>
+        <ApiHome/>
+    </>
   )
 }
 

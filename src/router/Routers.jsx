@@ -4,6 +4,7 @@ import Home from "../page/home/Home";
 import Fotos from "../page/fotos/Fotos";
 import Ilutraciones from "../page/ilutraciones/Ilutraciones";
 import Videos from "../page/videos/Videos";
+import ResultSearcher from "../page/Result-Searcher/ResultSearcher";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,12 @@ export const router = createBrowserRouter([
     path: "videos",
     element: (
       <Videos/>
+    ),
+  },
+  {
+    path: "resultsearcher",
+    element: (
+      <ResultSearcher/>
     ),
   },
 ]);

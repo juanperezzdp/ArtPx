@@ -15,7 +15,6 @@ function Navbar() {
        <div><Link to='/fotos'><BsFillImageFill className='icon'/>Fotos</Link></div>
        <div><Link to='/ilutraciones'><HiPaintBrush className='icon'/>Ilustraciones</Link></div>
        <div><Link to='/videos'><ImVideoCamera className='icon'/>Videos</Link></div>
-       
     </nav>
     <hr />
     </>

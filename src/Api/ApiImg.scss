@@ -6,7 +6,7 @@
 
 .container-wa{
     display: flex;
-    width: 13rem;
+    width: max-content;
     height: 20rem;
     border-radius: 1rem;
     overflow: hidden;
@@ -16,11 +16,9 @@
   }
   
   .Img{
-    display: flex;
-    align-items: start;
-    height: auto;
-    width: 100%;
+    width: 13rem ;
     z-index: -1;
+
   
   }
   
