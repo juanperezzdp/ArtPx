@@ -1,15 +1,16 @@
-import React from 'react'
-import Navbar from '../../components/Navbar/Navbar'
-import Searcher from '../../components/Searcher/Searcher'
+import React from 'react';
+import Navbar from '../../components/Navbar/Navbar';
+import ApiResult from '../../Api/ApiResult';
 
 function ResultSearcher() {
+  
+
   return (
     <div>
-      <Navbar/>
-        <Searcher/>
-        
+      <Navbar />
+      <ApiResult/>
     </div>
-  )
+  );
 }
 
-export default ResultSearcher
+export default ResultSearcher;
