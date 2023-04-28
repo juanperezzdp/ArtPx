@@ -7,8 +7,9 @@ function Searcher() {
   const navigate = useNavigate();
 
   const onSearch = () => {
-    navigate('/resultsearcher', { state: { searchTerm: valueInput } });
-  };
+    navigate('/resultsearcher', 
+    { state: { searchTerm: valueInput } })
+  }
 
   return (
     <>
