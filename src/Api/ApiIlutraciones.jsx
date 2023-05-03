@@ -4,9 +4,9 @@ import "./ApiImg.scss";
 import Spinner from "../components/Spinner/Spinner";
 import { useNavigate } from "react-router-dom";
 
-function ApiFotos() {
+function ApiIlutraciones() {
   const { datab, loading } = useFetch(
-    "https://pixabay.com/api/?key=34656260-1521fb02311370c9bb96d1d72&q=natural&per_page=100"
+    "https://pixabay.com/api/?key=34656260-1521fb02311370c9bb96d1d72&q=illustrations&per_page=100"
   );
   const [selectedData, setSelectedData] = useState(null);
 
@@ -46,4 +46,4 @@ function ApiFotos() {
   );
 }
 
-export default ApiFotos;
+export default ApiIlutraciones;

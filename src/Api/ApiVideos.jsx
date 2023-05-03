@@ -4,9 +4,9 @@ import "./ApiImg.scss";
 import Spinner from "../components/Spinner/Spinner";
 import { useNavigate } from "react-router-dom";
 
-function ApiHome() {
+function ApiVideos() {
   const { datab, loading } = useFetch(
-    "https://pixabay.com/api/?key=34656260-1521fb02311370c9bb96d1d72&q=fotografia&per_page=100"
+    "https://pixabay.com/api/videos/?key=34656260-1521fb02311370c9bb96d1d72&q=playa&per_page=100"
   );
   const [selectedData, setSelectedData] = useState(null);
 
@@ -19,33 +19,35 @@ function ApiHome() {
   };
 
   return (
-    <>
-      <div className="warp-container">
-        {loading && (
-          <div>
-            <Spinner />
-          </div>
-        )}
+    <div className="w">
+      {loading && (
+        <div>
+          <Spinner />
+        </div>
+      )}
+      <div className="container-video-warp">
         {datab?.map((data, index) => (
           <div
+            className="container-video"
             onClick={() => handleDataClick(data)}
-            className="container-wa"
             key={index}
           >
-            <img className="Img" src={data.webformatURL} alt="" />
-            <div className="h4">
-              <img
-                style={{ width: "2rem", borderRadius: "50%", margin: "1rem" }}
-                src={data.userImageURL}
-                alt=""
-              />
-              <h5>{data.user}</h5>
-            </div>
+            <video
+              src={data.videos.tiny.url}
+              muted
+              loop
+              onMouseEnter={(e) => {
+                e.target.play();
+              }}
+              onMouseLeave={(e) => {
+                e.target.pause();
+              }}
+            />
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
-export default ApiHome;
+export default ApiVideos;

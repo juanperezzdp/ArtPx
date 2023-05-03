@@ -1,33 +1,63 @@
-.warp-container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
+// Variables
+$color-background: #1a1a1a9c;
+$color-text: black;
+$font-size-h5: 1.2rem;
+$margin-top-h5: 1rem;
+$image-width: 13rem;
+$container-height: 20rem;
+$border-radius: 1rem;
+$padding: 1rem;
+
+// Estilos
+.warp-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
 }
 
-.container-wa{
-    display: flex;
-    width: max-content;
-    height: 20rem;
-    border-radius: 1rem;
-    overflow: hidden;
-    margin: 1rem;background-color: #1a1a1a9c;
-    z-index: -2;
-    background-color: rgb(234, 234, 234);
+.container-wa {
+  display: flex;
+  width: max-content;
+  height: $container-height;
+  border-radius: $border-radius;
+  overflow: hidden;
+  margin: $padding;
+  background-color: $color-background;
+  cursor: pointer;
+
+
+  .Img {
+    width: $image-width;
+
   }
-  
-  .Img{
-    width: 13rem ;
-    z-index: -1;
-  }
-  
-  .h4{
+
+  .h4 {
     height: 10%;
     display: flex;
     position: absolute;
     align-items: start;
-    color: black;
-    h5{
-      margin-top: 1rem;
-    }
-    
+    color: $color-text;
+    font-size: $font-size-h5;
+    margin-top: $margin-top-h5;
   }
+}
+
+
+.container-video-warp{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .container-video{
+    width: 24.5rem; 
+    margin: 0.5rem;
+
+
+    video{
+      max-width: 100%;
+       height: auto;
+    }
+  }
+
+}

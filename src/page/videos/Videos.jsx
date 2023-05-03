@@ -1,17 +1,16 @@
-import React from 'react'
-import VideosLanding from './VideosLanding'
-import ApiHome from '../../Api/ApiHome'
-import Navbar from '../../components/Navbar/Navbar'
-
+import React from "react";
+import VideosLanding from "./VideosLanding";
+import Navbar from "../../components/Navbar/Navbar";
+import ApiVideos from "../../Api/ApiVideos";
 
 function Videos() {
   return (
     <>
-        <VideosLanding/>
-        <Navbar/>
-        <ApiHome/>
+      <VideosLanding />
+      <Navbar />
+      <ApiVideos />
     </>
-  )
+  );
 }
 
-export default Videos
+export default Videos;
