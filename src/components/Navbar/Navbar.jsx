@@ -11,7 +11,7 @@ function Navbar() {
     <>
       <nav className="container-nav">
         <div>
-          <Link to="/home">
+          <Link to="/">
             <RiHome3Fill className="icon" />
             Home
           </Link>

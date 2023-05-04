@@ -5,16 +5,11 @@ import Fotos from "../page/fotos/Fotos";
 import Ilutraciones from "../page/ilutraciones/Ilutraciones";
 import Videos from "../page/videos/Videos";
 import ResultSearcher from "../page/Result-Searcher/ResultSearcher";
-import Login from "../page/Login/Login";
 import DetailCard from "../page/DetailCard/DetailCard";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
-  },
-  {
-    path: "home",
     element: <Home />,
   },
   {
