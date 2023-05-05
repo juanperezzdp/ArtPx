@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./DetailCard.scss";
 import { AiFillLike } from "react-icons/ai";
-import { GrFormView } from "react-icons/gr";
+import { ImCloudDownload } from "react-icons/im";
 
 function DetailCard() {
   const location = useLocation();
   const detailData = location.state && location.state.detailData;
-  const [isDownloading, setIsDownloading] = useState(false); // nuevo estado
+  const [isDownloading, setIsDownloading] = useState(false);
   const [like, setLike] = useState(detailData.likes);
   console.log(detailData);
 
-  // función para manejar la descarga de la imagen
   const handleDownload = () => {
     setIsDownloading(true);
     fetch(detailData.largeImageURL)
@@ -42,9 +41,7 @@ function DetailCard() {
 
           <div className="title-fallow">
             <h5>{detailData.user}</h5>
-            <button onClick={handleLike}>
-              <GrFormView className="like" /> {detailData.views}
-            </button>
+            <p className="view">{detailData.views} visto</p>
           </div>
         </div>
 
@@ -52,18 +49,27 @@ function DetailCard() {
           <button className="like" onClick={handleLike}>
             <AiFillLike /> {like}
           </button>
+
           <button
             className="download"
             onClick={handleDownload}
             disabled={isDownloading}
           >
             {isDownloading ? "Descargando..." : "Descargar"}
+            <span>
+              <ImCloudDownload className="icon-download" />
+              {detailData.downloads}
+            </span>
           </button>
         </div>
       </div>
 
       <div className="c-img">
         <img src={detailData.webformatURL} alt="img" />
+      </div>
+
+      <div className="c-tang">
+        <p>Imagen de {detailData.tags} de uso gratuito.</p>
       </div>
     </div>
   );
