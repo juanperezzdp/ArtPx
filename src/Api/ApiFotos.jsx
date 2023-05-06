@@ -19,30 +19,28 @@ function ApiFotos() {
   };
 
   return (
-    <div className="warp-container">
-      {loading && (
-        <div>
-          <Spinner />
-        </div>
-      )}
-      {datab?.map((data, index) => (
-        <div
-          onClick={() => handleDataClick(data)}
-          className="container-wa"
-          key={index}
-        >
-          <img className="Img" src={data.webformatURL} alt="" />
-          <div className="h4">
-            <img
-              style={{ width: "2rem", borderRadius: "50%", margin: "1rem" }}
-              src={data.userImageURL}
-              alt=""
-            />
-            <h5>{data.user}</h5>
+    <>
+      <div className="image-grid">
+        {loading && (
+          <div className="spinner-container">
+            <Spinner />
           </div>
-        </div>
-      ))}
-    </div>
+        )}
+        {datab?.map((data, index) => (
+          <div
+            onClick={() => handleDataClick(data)}
+            className="image-container"
+            key={index}
+          >
+            <img className="image" src={data.webformatURL} alt="" />
+            <div className="info-container">
+              <img className="user-image" src={data.userImageURL} alt="" />
+              <h5>{data.user}</h5>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

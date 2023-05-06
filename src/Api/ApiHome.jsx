@@ -20,25 +20,21 @@ function ApiHome() {
 
   return (
     <>
-      <div className="warp-container">
+      <div className="image-grid">
         {loading && (
-          <div>
+          <div className="spinner-container">
             <Spinner />
           </div>
         )}
         {datab?.map((data, index) => (
           <div
             onClick={() => handleDataClick(data)}
-            className="container-wa"
+            className="image-container"
             key={index}
           >
-            <img className="Img" src={data.webformatURL} alt="" />
-            <div className="h4">
-              <img
-                style={{ width: "2rem", borderRadius: "50%", margin: "1rem" }}
-                src={data.userImageURL}
-                alt=""
-              />
+            <img className="image" src={data.webformatURL} alt="" />
+            <div className="info-container">
+              <img className="user-image" src={data.userImageURL} alt="" />
               <h5>{data.user}</h5>
             </div>
           </div>

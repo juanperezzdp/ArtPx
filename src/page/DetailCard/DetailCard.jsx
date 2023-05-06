@@ -3,13 +3,13 @@ import { useLocation } from "react-router-dom";
 import "./DetailCard.scss";
 import { AiFillLike } from "react-icons/ai";
 import { ImCloudDownload } from "react-icons/im";
+import { FiShare2 } from "react-icons/fi";
 
 function DetailCard() {
   const location = useLocation();
   const detailData = location.state && location.state.detailData;
   const [isDownloading, setIsDownloading] = useState(false);
   const [like, setLike] = useState(detailData.likes);
-  console.log(detailData);
 
   const handleDownload = () => {
     setIsDownloading(true);
@@ -41,14 +41,21 @@ function DetailCard() {
 
           <div className="title-fallow">
             <h5>{detailData.user}</h5>
-            <p className="view">{detailData.views} visto</p>
+            <p className="view">
+              {detailData.views.toLocaleString("es-ES")} visto
+            </p>
           </div>
         </div>
 
         <div className="container-button">
-          <button className="like" onClick={handleLike}>
-            <AiFillLike /> {like}
-          </button>
+          <div className="container-like">
+            <button className="like">
+              <FiShare2 />
+            </button>
+            <button className="like" onClick={handleLike}>
+              <AiFillLike /> {like}
+            </button>
+          </div>
 
           <button
             className="download"
@@ -58,7 +65,7 @@ function DetailCard() {
             {isDownloading ? "Descargando..." : "Descargar"}
             <span>
               <ImCloudDownload className="icon-download" />
-              {detailData.downloads}
+              {detailData.downloads.toLocaleString("es-ES")}
             </span>
           </button>
         </div>

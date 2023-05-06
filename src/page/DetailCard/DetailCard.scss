@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
 
-}
 
 .container-detail{
    
@@ -36,13 +34,13 @@ body{
 
                 h5{
                     font-size: 1.2rem;
+                    color: black;
                 }
 
                 .view{
                     display: flex;
                     justify-content: center;
                     margin-top: 0.5rem;
-                    color: #009b50;
                     
                 }
             }
@@ -54,24 +52,31 @@ body{
             align-items: center;
             margin-left: auto;
 
+            .container-like{
+                display: flex;
+           
             .like{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 1px solid #3c3c3c;
-                width: 5rem;
+                border: 1px solid rgb(101, 111, 121);
+                width: max-content;
                 height: 3rem;
                 border-radius: 1rem;
                 margin-right: 0.5rem;
-                color: #009b50;
+                color: black;
                 font-size: 1.1rem;
+                padding: 0 1rem;
+                background-color: white;
 
-                &:hover{
+                
+                &:active{
                     color: #004122;
-                    border: 3px solid #0f6e40;
+                    border: 1px solid #009b50;
                 }
                 
             }
+        }
 
             .download{
                 background: linear-gradient(220.55deg, #48b982 0%, #0f6e40 100%);
@@ -129,6 +134,52 @@ body{
     .c-tang{
         margin-left: 1rem;
     }
+}
 
-   
+
+
+@media (max-width: 700px) {
+
+    .container-detail{
+
+
+    .user{
+        display: flex;
+        flex-direction: column;
+        align-items:  start;
+        margin-top: 2rem;
+        .user-img{
+
+            .title-fallow{
+
+            }
+        }
+
+        .container-button{
+            width: max-content;
+            display: flex;
+            margin-right: auto;
+            margin-top: 1.5rem;
+
+            .container-like{
+                display: flex;
+                
+            }
+
+            .download{
+                margin-right: 0;
+            
+            }
+        }
+    }
+    .c-img{
+        margin-top: 5rem;
+        
+        img{
+            width: 100%;
+            height: auto;
+            padding: 0 1rem;
+        }
+    }
+}
 }
