@@ -1,4 +1,5 @@
 .container-input{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,4 +48,30 @@
     } 
     }
     
+    }
+
+    @media (max-width: "700px") {
+        .container-input{
+            
+            h3{
+                margin-left: 1.5rem;
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+                margin-left: 1.5rem;
+            }
+        
+            .input-center{
+                width: 22rem;
+               input{
+    
+            }
+            button{
+                width: 15rem ;
+                font-size: 1rem;
+            } 
+            }
+            
+            }
     }

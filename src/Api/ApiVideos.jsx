@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function ApiVideos() {
   const { datab, loading } = useFetch(
-    "https://pixabay.com/api/videos/?key=34656260-1521fb02311370c9bb96d1d72&q=playa&per_page=100"
+    "https://pixabay.com/api/videos/?key=34656260-1521fb02311370c9bb96d1d72&q=playas&per_page=100"
   );
   const [selectedData, setSelectedData] = useState(null);
 

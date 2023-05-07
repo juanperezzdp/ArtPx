@@ -35,7 +35,6 @@ function Navbar() {
           </Link>
         </div>
       </nav>
-      <hr />
     </>
   );
 }

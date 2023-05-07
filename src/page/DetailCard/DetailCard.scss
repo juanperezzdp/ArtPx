@@ -122,6 +122,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 1rem;
+        width: 100%;
 
         img{
             margin-top: 1rem;
@@ -129,10 +131,16 @@
             height: 27rem;
             width: auto;
         }
+
+        video{
+            width: 100%;
+            padding: 0 2rem;
+        }
     }
 
     .c-tang{
         margin-left: 1rem;
+        
     }
 }
 
@@ -181,5 +189,10 @@
             padding: 0 1rem;
         }
     }
+    .c-tang{
+        margin-bottom: 1rem;
+        
+    }
+
 }
 }

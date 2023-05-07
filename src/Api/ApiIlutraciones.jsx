@@ -9,6 +9,7 @@ function ApiIlutraciones() {
     "https://pixabay.com/api/?key=34656260-1521fb02311370c9bb96d1d72&q=illustrations&per_page=100"
   );
   const [selectedData, setSelectedData] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
 
   const navigate = useNavigate();
 
@@ -17,6 +18,9 @@ function ApiIlutraciones() {
     setSelectedData(data);
     navigate("/detailcard", { state: { detailData: data } });
   };
+
+  const defaultUserImage =
+    "https://pixabay.com/static/img/profile_images/green.svg";
 
   return (
     <>
@@ -29,14 +33,22 @@ function ApiIlutraciones() {
         {datab?.map((data, index) => (
           <div
             onClick={() => handleDataClick(data)}
+            onMouseMove={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(-1)}
             className="image-container"
             key={index}
           >
             <img className="image" src={data.webformatURL} alt="" />
-            <div className="info-container">
-              <img className="user-image" src={data.userImageURL} alt="" />
-              <h5>{data.user}</h5>
-            </div>
+            {hoveredIndex === index && (
+              <div className="info-container">
+                <img
+                  className="user-image"
+                  src={data.userImageURL || defaultUserImage}
+                  alt=""
+                />
+                <h5>{data.user}</h5>
+              </div>
+            )}
           </div>
         ))}
       </div>
