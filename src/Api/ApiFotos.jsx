@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function ApiFotos() {
   const { datab, loading } = useFetch(
-    "https://pixabay.com/api/?key=34656260-1521fb02311370c9bb96d1d72&q=natural&per_page=100"
+    "https://pixabay.com/api/?key=34656260-1521fb02311370c9bb96d1d72&q=natural&per_page=200"
   );
   const [selectedData, setSelectedData] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(-1);
@@ -26,7 +26,7 @@ function ApiFotos() {
     <>
       <div className="image-grid">
         {loading && (
-          <div className="spinner-container">
+          <div>
             <Spinner />
           </div>
         )}

@@ -3,6 +3,7 @@ import { useFetch } from "../Hook/useFetch";
 import "./ApiImg.scss";
 import Spinner from "../components/Spinner/Spinner";
 import { useNavigate } from "react-router-dom";
+import { MdOutlineVideoLibrary } from "react-icons/md";
 
 function ApiVideos() {
   const { datab, loading } = useFetch(
@@ -32,6 +33,9 @@ function ApiVideos() {
             onClick={() => handleDataClick(data)}
             key={index}
           >
+            <div className="container-video">
+              <MdOutlineVideoLibrary className="icon-video" />
+            </div>
             <video
               src={data.videos.tiny.url}
               muted

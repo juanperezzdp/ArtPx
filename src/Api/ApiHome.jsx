@@ -26,7 +26,7 @@ function ApiHome() {
     <>
       <div className="image-grid">
         {loading && (
-          <div className="spinner-container">
+          <div>
             <Spinner />
           </div>
         )}
