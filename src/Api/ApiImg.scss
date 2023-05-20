@@ -147,6 +147,7 @@ cursor: pointer;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  cursor: pointer;
 
 
 .result-container{
@@ -199,10 +200,12 @@ cursor: pointer;
   flex-wrap: wrap;
   justify-content: space-evenly;
 
+
   .film-container-w{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
     .container-icons{
       position: absolute;
@@ -217,6 +220,7 @@ cursor: pointer;
       .icons-video{
         font-size: 2rem;
         color: white;
+        
       }
     }
 
