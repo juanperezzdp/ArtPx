@@ -33,7 +33,7 @@ function ApiVideos() {
             onClick={() => handleDataClick(data)}
             key={index}
           >
-            <div className="container-video">
+            <div className="container-videos">
               <MdOutlineVideoLibrary className="icon-video" />
             </div>
             <video

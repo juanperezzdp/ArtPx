@@ -37,50 +37,51 @@ function ResultSearcher() {
 
       <div className="container-result-warp">
         {datab?.map((data, index) => (
-          <div className="result-container" key={index}>
+          <div key={index}>
             {data.type === "photo" ? (
-              <div
-                className="result-card"
-                onClick={() => handleDataClick(data)}
-                onMouseMove={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(-1)}
-                key={index}
-              >
-                <img className="result-img" src={data.webformatURL} alt="" />
-                {hoveredIndex === index && (
-                  <div className="result-info">
-                    <img
-                      className="result-user"
-                      src={data.userImageURL || defaultUserImage}
-                      alt=""
-                    />
-                    <h5>{data.user}</h5>
-                  </div>
-                )}
+              <div className="result-container">
+                <div
+                  className="result-card"
+                  onClick={() => handleDataClick(data)}
+                  onMouseMove={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(-1)}
+                  key={index}
+                >
+                  <img className="result-img" src={data.webformatURL} alt="" />
+                  {hoveredIndex === index && (
+                    <div className="result-info">
+                      <img
+                        className="result-user"
+                        src={data.userImageURL || defaultUserImage}
+                        alt=""
+                      />
+                      <h5>{data.user}</h5>
+                    </div>
+                  )}
+                </div>
               </div>
             ) : data.type === "film" ? (
-              <div className="">
-                <div className="">
-                  <div
-                    className=""
-                    onClick={() => handleDataClick(data)}
-                    key={index}
-                  >
-                    <div className="">
-                      <MdOutlineVideoLibrary className="icon-video" />
-                    </div>
-                    <video
-                      src={data.videos.tiny.url}
-                      muted
-                      loop
-                      onMouseEnter={(e) => {
-                        e.target.play();
-                      }}
-                      onMouseLeave={(e) => {
-                        e.target.pause();
-                      }}
-                    />
+              <div className="film-container">
+                <div
+                  className="film-container-w"
+                  onClick={() => handleDataClick(data)}
+                  key={index}
+                >
+                  <div className="container-icons">
+                    <MdOutlineVideoLibrary className="icons-video" />
                   </div>
+                  <video
+                    className="videos-width"
+                    src={data.videos.tiny.url}
+                    muted
+                    loop
+                    onMouseEnter={(e) => {
+                      e.target.play();
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.pause();
+                    }}
+                  />
                 </div>
               </div>
             ) : null}
