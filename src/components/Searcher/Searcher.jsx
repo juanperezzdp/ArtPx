@@ -4,10 +4,17 @@ import "./searcher.scss";
 
 function Searcher() {
   const [valueInput, setValueInput] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
   const navigate = useNavigate();
 
   const onSearch = () => {
-    navigate("/resultsearcher", { state: { searchTerm: valueInput } });
+    navigate("/resultsearcher", {
+      state: { searchTerm: valueInput, searchOption: selectedOption },
+    });
+  };
+
+  const handleSelectChange = (e) => {
+    setSelectedOption(e.target.value);
   };
 
   return (
@@ -24,6 +31,13 @@ function Searcher() {
             placeholder="Buscar imagenes en ArtPx"
             onChange={(e) => setValueInput(e.target.value)}
           />
+          <div className="container-select">
+            <select value={selectedOption} onChange={handleSelectChange}>
+              <option value="">Imagen</option>
+              <option value="videos">Videos</option>
+            </select>
+          </div>
+
           <button onClick={onSearch}>Buscar</button>
         </div>
       </div>
